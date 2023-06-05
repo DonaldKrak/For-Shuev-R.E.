@@ -1,0 +1,180 @@
+#projects {
+  background-color: #e2edff;
+}
+
+section {
+  padding: 50px;
+}
+
+.project-box {
+  position: relative;
+  background: linear-gradient(149deg, rgb(56, 190, 56) 0%, rgb(43, 187, 197) 42%, rgb(182, 87, 160) 72%, rgb(215, 235, 107) 100%);;
+  border-radius: 10px;
+  height: 400px;
+  width: 300px;
+  transform-style: preserve-3d;
+    animation: project-box 5s infinite linear;
+       background-size: 400%;
+}
+
+
+@keyframes project-box {
+    0% {
+        background-position: 10% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 10% 0%;
+    }
+}
+
+
+
+
+
+
+
+
+.project-box::before {
+  content: 'Мой';
+  position: absolute;
+  color: #fff;
+  font-size: 3em;
+  font-weight: bold;
+  font-style: italic;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.project-box:hover::before {
+  opacity: 0.2;
+}
+
+.project-box::after {
+  content: 'Проект';
+  position: absolute;
+  color: #fff;
+  font-size: 2.3em;
+  font-weight: bold;
+  font-style: italic;
+  top: 350px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.project-box:hover::after {
+  opacity: 0.2;
+}
+
+.project-name {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  font-size: 2em;
+  opacity: 0;
+  transform: translate3d(0, 0, 50px);
+  transition: 0.5s;
+}
+
+.project-box:hover .project-name {
+  top: 20px;
+  opacity: 1;
+}
+
+.project-btn {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate3d(-50%, 0, 100px);
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 3;
+}
+
+.project-box:hover .project-btn {
+  opacity: 1;
+  bottom: 20px;
+}
+
+.project-img {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate3d(-50%, -52%, 80px);
+  max-width: 350px;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.project-box:hover .project-img {
+  transform: translate3d(-50%, -52%, 100px) rotate(5deg) scale(1.2);
+}
+
+
+
+
+
+
+
+
+.container1
+{
+  width:100%;
+  padding-right:var(--bs-gutter-x,.75rem);
+  padding-left:var(--bs-gutter-x,.75rem);
+  margin-right:auto;
+  margin-left:auto;
+  display:flex;
+  flex-wrap:inherit;
+  align-items:center;
+  justify-content:space-between;
+}
+
+
+
+.row {
+  --bs-gutter-x:1.5rem;
+  --bs-gutter-y:0;
+  display:flex;
+  flex-wrap:wrap;
+  margin-top:calc(var(--bs-gutter-y) * 1);
+  margin-right:calc(var(--bs-gutter-x)/ 1);
+  margin-left:calc(var(--bs-gutter-x)/ 1);
+}
+
+
+.col{
+  flex:1 0 0%;
+}
+
+
+.flex-1
+{
+  flex:0 0 auto;
+  width:50%;
+}
+.col-md-7
+{
+  flex:0 0 auto;
+  width:58.3333333333%;
+}
+
+.flex-2
+{
+  flex:0 0 auto;
+  width:360px;
+}
+
+.margin-1
+{
+  margin-bottom:1rem!important
+}
